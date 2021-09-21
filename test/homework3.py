@@ -74,22 +74,46 @@
 # #  END
 #
 # # BEGIN Task 7   Количество гласных
-string=input()
-a=e=i=o=u=y=0
-for n in string:
-    if n == "a":
-        a+=1
-    if n == "e":
-        e += 1
-    if n == "i":
-        i += 1
-    if n == "o":
-        o += 1
-    if n == "u":
-        u += 1
-    if n == "y":
-        y += 1
-print(f"a={a} e={e} i={i} o={o} u={u} y={y}")
-print("Sum="+str(a+e+i+o+u+y))
-#  END
-
+# string=input("Input sentence: ")
+# a=e=i=o=u=y=0
+# for n in string:
+#     if n == "a":
+#         a+=1
+#     if n == "e":
+#         e += 1
+#     if n == "i":
+#         i += 1
+#     if n == "o":
+#         o += 1
+#     if n == "u":
+#         u += 1
+#     if n == "y":
+#         y += 1
+# print(str(a+e+i+o+u+y) + f" (a-{a}, e-{e}, i-{i}, o-{o}, u-{u}, y-{y})")
+# # END
+#
+# # BEGIN Task 7   Количество согласных
+# string=input("Input sentence: ")
+# let=0
+# for n in string:
+#     if n != "a" and n != "e" and n != "i" and n != "o" and n != "u" and n != "y":
+#         let+=1
+# print(let)
+# # END
+#
+# # BEGIN Task 8   Обратный порядок
+# string = input("Input sentence: ")
+# result = ""
+# for current in range(len(string) - 1, -1, -1):
+#     result += string[current]
+# print(result)
+# # END
+#
+# # BEGIN Task 9   Пирамида
+# n = int(input("Input number: "))
+# for number in range (1, n+1):
+#     t=""
+#     for inner in range(1, number + 1):
+#         t+=" "+str(number)
+#     print(t)
+# # END
