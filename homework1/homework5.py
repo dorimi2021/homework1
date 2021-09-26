@@ -1,45 +1,41 @@
-# def count_greater_or_equal(numbers, x):
-#     s=0
-#     for number in numbers:
-#         if (number>=x):
-#             s+=1
-#     return s
-# #print(count_greater_or_equal((1,2,3,4,5), 2))
+# TASK 1
+# def unique(numbers):
+#     return list(set(numbers))
 #
-# def test_count_greater_or_equal():test_count_greater_or_equal
-#     assert count_greater_or_equal([1, 2, 3, 4, 5], 2) == 4
-#     assert count_greater_or_equal([1, 2, 3, 4, 5], 1) == 5
-#     assert count_greater_or_equal([1, 2, 3, 4, 5], 0) == 5
-#     assert count_greater_or_equal([0, 1], 2) == 0
-#     assert count_greater_or_equal([], 2) == 0
+# def test_unique():
+#     assert unique([1, 1, 2, 3, 4, 4, 5, 5]) == [1, 2, 3, 4, 5]
+#     assert unique([1, 1, 1, 1]) == [1]
+#     assert unique([]) == []
 #     print("Great your solution works!")
-#
-# test_count_greater_or_equal()
+# test_unique()
 
-def rotate(numbers, rotateIndex):
-    if len(numbers) == 0:
-        return numbers
-    arrayCorect = 1
-    numbersLen = len(numbers) - arrayCorect
-    for outer in range(0, rotateIndex):
-        lastElement = numbers[numbersLen]
-        for inner in range(0, numbersLen):
-            rotatePosition = numbersLen - arrayCorect - inner
-            bigger = numbers[rotatePosition]
-            numbers[rotatePosition + arrayCorect] = bigger
-        numbers[0] = lastElement
-    return numbers
+# TASK 2
+def count_words(string):
+
+    my_dict = {}
+    for str in string:
+        my_dict[str] = 0
+    for str in string:
+        count = my_dict.get(str)
+        count += 1
+        my_dict[str] = count
+    return my_dict
 
 
-def test_rotate():
-    assert rotate([1, 2, 3], 1) == [3, 1, 2]
-    assert rotate([1, 2, 3], 2) == [2, 3, 1]
-    assert rotate([1, 2, 3], 3) == [1, 2, 3]
-    assert rotate([1, 2, 3], 0) == [1, 2, 3]
-    assert rotate([1], 1) == [1]
-    assert rotate([1], 0) == [1]
-    assert rotate([], 2) == []
-    print("Great your solution works!")
+
+def test_count_words():
+    assert count_words(["text", "text", "apple", "orange", "yellow", "orange"]) == {
+        "text": 2,
+        "apple": 1,
+        "orange": 2,
+        "yellow": 1
+    }
+    assert count_words(["text", "text", "text", "text", "text", "orange"]) == {
+        "text": 5,
+        "orange": 1,
+    }
+    assert count_words([]) == {}
+    print("success")
 
 
-test_rotate()
+test_count_words()
