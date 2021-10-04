@@ -61,6 +61,15 @@ def test_consistent_string():
 
 test_consistent_string()
 
+# result = set()
+#     allowed = set(allowed)
+#     for word in strings:
+#         w_set = set(word)
+#         if w_set - allowed == set():
+#             result.add(word)
+#     return result
+
+
 #Task 4
 def sort_desc(strings):
     strings.sort(reverse=True)
