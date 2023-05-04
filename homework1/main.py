@@ -1,5 +1,8 @@
 import calc
 import string
+import new
+
+new.factorial(55)
 
 expression: str = input()
 res = calc.calc(expression)
