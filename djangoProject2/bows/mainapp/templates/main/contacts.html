@@ -1,0 +1,53 @@
+
+
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+<body>
+
+<aside>
+    <a href="{% url 'home' %}"><img src="{% static 'main/img/logo.png' %}" alt="Лого"></a>
+    <span class="logo">Аксессуары для волос</span>
+    <h3>Навигация</h3>
+    <ul>
+        <a href="{% url 'home' %}">
+            <li><i class="fas fa-home"></i> Главная</li>
+        </a>
+        <a href="{% url 'about' %}">
+            <li><i class="fas fa-address-card"></i> О магазине</li>
+        </a>
+        <a href="{% url 'contacts' %}">
+            <li><i class="fas fa-paper-plane"></i> Контакты</li>
+        </a>
+    </ul>
+
+</aside>
+
+
+
+
+    <div class="features">
+        <h1>Контакты</h1>
+        <p>
+         <br>
+         Город - Одесса   <br><br>
+         Телефон - (097)123-45-67 (телеграм, вайбер) <br><br>
+         Инстаграм - bantiki_nataly <br><br>
+
+        </p>
+        <a href="{% url 'home' %}"><button class="btn btn-danger">Главная</button></a>
+
+    </div>
+</body>
+</html>
+
