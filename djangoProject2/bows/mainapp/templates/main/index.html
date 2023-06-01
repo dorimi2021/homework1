@@ -1,0 +1,24 @@
+{% extends 'main/layout.html' %}
+{% block title %}Бантики{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1 align="center">Бантики</h1>
+
+        {% for el in bow %}
+            <div class ="alert alert-warning">
+                <h3>{{ el.name }}</h3>
+
+                <img src="{{ el.photo1 }}" width="300" >
+
+                <p>{{ el.price }}</p>
+                <a href="{% url 'bow-detail' el.id %}" class="btn btn-warning">Подробнее</a>
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+{% endblock %}
+
+

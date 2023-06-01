@@ -1,0 +1,73 @@
+body {
+    background: azure;
+}
+
+aside {
+    display: inline-block;
+    float: left;
+    background: lavender;
+    width: 230px;
+    padding: 1%;
+    height: 200vh;
+    color: black;
+    border-right: 2px solid slategray ;
+}
+
+aside img {
+    width: 200px;
+    float: left;
+}
+
+aside .logo {
+    color: mediumvioletred;
+    font-size: 30px;
+    /*margin-left: 10px;*/
+    font-weight: bold;
+}
+
+aside h3 {
+    margin-top: 50px;
+    font-size: 28px;
+}
+
+aside ul {list-style: none}
+aside ul li {
+    color: black;
+    display: block;
+    margin-top: 20px;
+    transition: transform .4s ease;
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: red;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+main .features {
+    float: left;
+    color: black;
+    margin-top: 30px;
+    margin-left: 10px;
+    text-align: left;
+    width: 75%;
+}
+
+main .features h1 {
+    font-size: 70px;
+    color:black
+}
+
+main .features p {
+    max-width: 700px;
+    /*margin: 20px;*/
+}
+
+.alert-warning {
+    display: inline-block;
+    float: left;
+    clear: both;
+    width: 400px;
+    margin: 20px 34%;
+    text-align: left;
+}
